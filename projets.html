@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="pages.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f10;
+            color: #e6e6e6;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #7f8c8d;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        a:hover { color: #e6e6e6; }
+
+        h1 {
+            margin: 14px 0 10px;
+            font-size: clamp(30px, 5vw, 44px);
+            color: var(--c4);
+        }
+
+        .intro {
+            color: #aeb2b8;
+            line-height: 1.7;
+            max-width: 82ch;
+            margin-bottom: 26px;
+        }
+
+        .project-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .project-card {
+            background: linear-gradient(145deg, #151518, #121215);
+            border: 1px solid rgba(242, 167, 184, 0.35);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 16px 38px rgba(242, 167, 184, 0.16);
+        }
+
+        .project-card h2 {
+            margin-bottom: 14px;
+            font-size: 1.55rem;
+            color: #ffd7e2;
+        }
+
+        .uml-image {
+            width: 100%;
+            max-width: 980px;
+            display: block;
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(242, 167, 184, 0.35);
+            box-shadow: 0 12px 30px rgba(242, 167, 184, 0.14);
+            background: #0f0f10;
+        }
+
+        .block {
+            margin-bottom: 14px;
+        }
+
+        .block:last-child {
+            margin-bottom: 0;
+        }
+
+        .block h3 {
+            margin-bottom: 6px;
+            color: #d8dde3;
+            font-size: 1rem;
+        }
+
+        .block p, .block li {
+            color: #aeb2b8;
+            line-height: 1.72;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .block ul li {
+            margin-bottom: 6px;
+        }
+
+        .key {
+            color: #ffd7e2;
+            font-weight: 700;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: #8c2f4a;
+            color: #ffffff;
+            padding: 9px 13px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        .github-link:hover {
+            color: #ffffff;
+            filter: brightness(1.12);
+            box-shadow: 0 0 0 2px rgba(242, 167, 184, 0.35);
+        }
+    </style>
+</head>
+<body class="page theme-projets">
+    <main>
+        <a href="index.html">← Retour au portfolio</a>
+        <h1>Projets</h1>
+        <p class="intro">
+            Cette section regroupe mes projets techniques avec une présentation structurée pour démontrer
+            mes compétences en conception, modélisation, développement et documentation.
+        </p>
+
+        <section class="project-list">
+            <article class="project-card">
+                <h2>VR-Store (site e-commerce)</h2>
+
+                <div class="block">
+                    <h3>Présentation</h3>
+                    <p>
+                        <strong>VR-Store</strong> est une application e-commerce orientée sur la VR,
+                        conçue avec une architecture <strong>full-stack</strong> claire :</br>
+                        <strong>- API Back-end</strong> (Node.js, Express, Sequelize, MySQL)</br>
+                        <strong>-Front-end</strong> (React + Vite).</br>
+                        Le projet a été pensé pour un rendu <strong>simple et robuste</strong>.
+                    </p>
+                </div>
+
+                <div class="block">
+                    <h3>Architecture globale</h3>
+                    <ul>
+                        <li><strong>Back-end :</strong> API REACT (authentification, produits, administration), modèles Sequelize, connexion MySQL.</li>
+                        <li><strong>Front-end :</strong> pages React (Home, Catalogue, Panier, Connexion, Inscription, MonEspace, Admin).</li>
+                        <li><strong>Flux :</strong> le front consomme les endpoints API pour afficher les produits, gérer le panier et piloter la session utilisateur.</li>
+                        <li><strong>Objectif :</strong> séparation claire de la <strong>logique métier</strong>, de la <strong>donnée</strong> et de l’<strong>interface</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Cahier des charges</h3>
+                    <ul>
+                        <li>Mettre en place une <strong>inscription / connexion</strong> utilisateur sécurisée.</li>
+                        <li>Permettre la consultation d’un <strong>catalogue produits VR</strong>.</li>
+                        <li>Gérer un <strong>panier persistant</strong> (ajout, suppression, total) via localStorage.</li>
+                        <li>Proposer un <strong>espace utilisateur</strong> (session active, déconnexion).</li>
+                        <li>Implémenter un espace <strong>administration</strong> avec CRUD produits.</li>
+                        <li>Conserver un code <strong>lisible, maintenable et présentable</strong> pour l’épreuve BTS.</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>Captures d'écran</h3>
+                    <ul>
+                        <li><strong>Home :</strong> présentation du magasin VR-Store.</li>
+                        <li><strong>Catalogue :</strong> affichage des produits et ajout au panier.</li>
+                        <li><strong>Panier :</strong> récapitulatif des articles, suppression, total.</li>
+                        <li><strong>Connexion / Inscription :</strong> authentification et création de compte.</li>
+                        <li><strong>MonEspace :</strong> informations de session et actions utilisateur.</li>
+                        <li><strong>Admin :</strong> gestion CRUD des produits via API.</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h3>MCD / MLD</h3>
+                    <p>
+                        La modélisation repose sur des entités centrales comme
+                        <strong>User</strong>, <strong>Produit</strong>, <strong>RefreshToken</strong> et
+                        <strong>LoginAttempts</strong>, ainsi que leurs relations métier.
+                        Le passage du <strong>MCD</strong> au <strong>MLD</strong> a permis une implémentation
+                        cohérente sous Sequelize/MySQL, exploitable directement par l’API.
+                    </p>
+                </div>
+
+                <div class="block">
+                    <h3>Diagrammes UML</h3>
+                    <p>
+                        Le diagramme de classes présente la structure fonctionnelle du système e-commerce
+                        (utilisateurs, commandes, produits, paiements, favoris, administration) et les relations
+                        entre les entités.
+                    </p>
+                    <img class="uml-image" src="assets/img/uml-vr-store.png" alt="Diagramme UML VR-Store">
+                </div>
+
+                <div class="block">
+                    <h3>GitHub</h3>
+                    <a class="github-link" href="https://github.com/SkylaaaX/site-e-commerce/tree/main" target="_blank" rel="noopener noreferrer">VR-Store</a>
+                </div>
+
+                <div class="block">
+                    <h3>Compétences mobilisées</h3>
+                    <ul>
+                        <li><strong>Développement full-stack :</strong> conception et intégration API + interface React.</li>
+                        <li><strong>Sécurité applicative :</strong> authentification JWT + refresh token.</li>
+                        <li><strong>Données :</strong> modélisation et persistance avec Sequelize / MySQL.</li>
+                        <li><strong>Front-end moderne :</strong> React fonctionnel, hooks, routing, context providers.</li>
+                        <li><strong>Gestion d’état :</strong> produits, panier et utilisateur via contextes partagés.</li>
+                        <li><strong>Qualité de projet :</strong> structuration, clarté du code, documentation technique. Utilisation IA d'apprentissage automatique.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

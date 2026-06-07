@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation personnelle - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="pages.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f10;
+            color: #e6e6e6;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #7f8c8d;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        a:hover { color: #e6e6e6; }
+
+        h1 {
+            margin: 14px 0 10px;
+            font-size: clamp(30px, 5vw, 44px);
+            color: var(--c1);
+        }
+
+        .intro {
+            color: #aeb2b8;
+            line-height: 1.7;
+            max-width: 80ch;
+            margin-bottom: 26px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #151518, #121215);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 1.35rem;
+        }
+
+        .card p, .card li {
+            color: #aeb2b8;
+            line-height: 1.65;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        .cv-link {
+            display: inline-block;
+            margin-top: 12px;
+            background: #8a4b1d;
+            color: #ffffff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        .cv-link:hover {
+            color: #ffffff;
+            filter: brightness(1.12);
+            box-shadow: 0 0 0 2px rgba(244, 177, 131, 0.35);
+        }
+
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .cert-item {
+            background: #101012;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+    </style>
+</head>
+<body class="page theme-presentation">
+    <main>
+        <a href="index.html">← Retour au portfolio</a>
+        <h1>Présentation personnelle</h1>
+        <p class="intro">
+            Cette section présente mon profil BTS SIO SLAM : mon CV, mon parcours scolaire, mes objectifs de formation
+            et mes certifications en cybersécurité, culture numérique et développement.
+        </p>
+
+        <section class="grid">
+            <article class="card">
+                <h2>CV</h2>
+                <p>
+                    Mon CV regroupe mes expériences, mes compétences techniques et mes objectifs professionnels
+                    dans les domaines du développement et des technologies immersives.
+                </p>
+                <a class="cv-link" href="./assets/CV-Skyla.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CV (PDF)</a>
+            </article>
+
+            <article class="card">
+                <h2>Parcours scolaire</h2>
+                <ul>
+                    <li>Baccalauréat (parcours précédent)</li>
+                    <li>BTS SIO (Services Informatiques aux Organisations)</li>
+                    <li>Spécialité SLAM : Solutions Logicielles et Applications Métiers</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>BTS SIO SLAM</h2>
+                <p>
+                    Le BTS SIO SLAM me permet de développer des compétences en conception d’applications,
+                    développement web, gestion de base de données, tests, maintenance et documentation technique.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Certifications</h2>
+                <p>Certifications suivies et/ou en cours dans le cadre de mon développement professionnel :</p>
+                <div class="cert-list">
+                    <div class="cert-item">Pix</div>
+                    <div class="cert-item">SecNumAcadémie</div>
+                    <div class="cert-item">Cisco</div>
+                    <div class="cert-item">OpenClassrooms</div>
+                    <div class="cert-item">Plateforme Microsoft</div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
